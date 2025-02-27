@@ -1,10 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Native American Land Loss Visualization</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Native American Land Loss Visualization</title>
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/recharts@2.1.9/umd/Recharts.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, 
+                         Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
-  <h1>Native American Land Loss Visualization</h1>
-  <p>This is a test page to verify GitHub Pages is working.</p>
-</body>
-</html>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        // Main component
+        const IndianLandLossVisualization = () => {
+          const [activeTab, setActiveTab] = React.useState('timeline');
+          
+          // Data from our analysis
+          const timelineData = [
+            {year: 1800, allotmentAcres: 414974, feePatentLosses: 102076, percentLost: 24.6},
+            {year: 1854, allotmentAcres: 418479, feePatentLosses: 102837, percentLost: 24.6},
+            {year: 1873, allotmentAcres: 440564, feePatentLosses: 107216, percentLost: 24.3},
+            {year: 1882, allotmentAcres: 675763, feePatentLosses: 310659, percentLost: 46.0},
+            {year: 1883, allotmentAcres: 1123133, feePatentLosses: 399075, percentLost: 35.5},
+            {year: 1884, allotmentAcres: 1127850, feePatentLosses: 402831, percentLost: 35.7},
+            {year: 1885, allotmentAcres: 1132823, feePatentLosses: 404865, percentLost: 35.7},
+            {year: 1887, allotmentAcres: 1984549, feePatentLosses: 779885, percentLost: 39.3},
+            {year: 1888, allotmentAcres: 1988744, feePatentLosses: 782743, percentLost: 39.4},
+            {year: 1889, allotmentAcres: 2188162, feePatentLosses: 869056, percentLost: 39.7},
+            {year: 1890, allotmentAcres: 2472894, feePatentLosses: 995142, percentLost: 40.2},
+            {year: 1891, allotmentAcres: 3430634, feePatentLosses: 1715006, percentLost: 50.0},
+            {year: 1892, allotmentAcres: 3824906, feePatentLosses: 1997118, percentLost: 52.2},
+            {year: 1893, allotmentAcres: 4025174, feePatentLosses: 2113504, percentLost: 52.5},
+            {year: 1894, allotmentAcres: 4363803, feePatentLosses: 2391630, percentLost: 54.8},
+            {year: 1895, allotmentAcres: 4496452, feePatentLosses: 2467396, percentLost: 54.9},
+            {year: 1896, allotmentAcres: 4512645, feePatentLosses: 2474674, percentLost: 54.8},
+            {year: 1897, allotmentAcres: 4513944, feePatentLosses: 2474704, percentLost: 54.8},
+            {year: 1898, allotmentAcres: 22182639, feePatentLosses: 17587720, percentLost: 79.3},
+            {y
